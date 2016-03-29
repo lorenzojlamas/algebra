@@ -39,5 +39,9 @@ esPositivo n | n >= 0 = True
 esPar n | even n = True
 		| otherwise = False
 
-esPrimo n |
-		  |
+esPar1 x = (div x 2) * 2 == x
+-- Div es el cosiente entero
+
+esPar2 x = (mod x 2) == 0
+-- mod es el cociente
+
