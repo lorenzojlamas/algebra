@@ -66,6 +66,6 @@ nand x y = not (x && y)
 unaRaiz a b c = ( (-b) + sqrt(b^2 - 4*a*c) ) / (2*a)
 
 unaRaiz1 a b c | (b^2 - 4*a*c) < 0 = error "No hay raices reales"
-			   | (b^2 - 4*a*c) >= 0 = ( (-b) + sqrt(b^2 - 4*a*c) ) / (2*
+			   | (b^2 - 4*a*c) >= 0 = ( (-b) + sqrt(b^2 - 4*a*c) ) / (2*a)
 
 pitagoras a b c = c^2 == a^2 + b^2

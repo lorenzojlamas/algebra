@@ -15,13 +15,13 @@ dist :: Float -> Float -> Float -> Float -> Float
 dist x1 y1 x2 y2 = sqrt ((x2 - x1)^2 + (y2 - y1)^2)
 
 dist1 :: (Float, Float) -> (Float, Float) -> Float
-dist1 p1 p2 = sqrt ((fst p1 - fst p2)^2 + (snd p1 - snd p2))
+dist1 p1 p2 = sqrt ((fst p1 - fst p2)^2 + (snd p1 - snd p2)^2)
 
-crearPar :: Num a => a -> Integer -> (a, Integer)
+crearPar :: a -> b -> (a, b)
 crearPar a b = (a,b)
 
-invertir :: (Integer, Integer) -> (Integer, Integer)
-invertir (a,b) = (b,a)
+invertir :: (a, b) -> (b, a)
+invertir p = (snd p , fst p)
 
 raices :: Float -> Float -> Float -> (Float,Float)
 --raices :: Floating a => a -> a -> a -> (a,a)
@@ -32,3 +32,11 @@ raices a b c | (b^2 -4*a*c) < 0 = error "No hay ninguna raiz real"
 ite :: Bool -> a -> a -> a
 ite a x y | a == True = x
 		  | a == False = y
+
+
+-- eager ( ansioso) de adentro hacia afuera (Estricto)
+
+-- lazy (peresoso) va de afuera hacia adentro (No estricto)
+
+
+
